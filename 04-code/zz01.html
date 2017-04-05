@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        _cookie:""
+    };
+    Object.defineProperty(obj,"cookie",{
+        get:function(){
+            return this._cookie;
+        },
+        set:function(value){
+            //thi指向调用这个方法的对象
+            this._value += value;
+        }
+    })
+</script>
+</body>
+</html>

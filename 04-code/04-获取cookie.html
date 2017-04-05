@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function getCookie(key){
+			//cookie的格式为"key=value;key=value;key=value"
+			//将这个字符串以;分隔为一个数组，数组中的每一个元素就是一个"key = value"
+			var tempArr = document.cookie.split(";");
+
+			//声明了一个空对象
+			var cookie = {};
+
+			//循环遍历刚才获取到的所有的"key=value"的字符串
+			for (var i = tempArr.length - 1; i >= 0; i--) {
+				var keyValuePair = tempArr[i];
+				//将当前遍历的到"key=value"的这种字符串用“=”分割为数组
+				var keyValue = keyValuePair.split("=");
+				//keyValue[0] 中存储的就是key   keyValue[1] 中存储的就是value
+
+				//将这个键值对存进上面声明的那个cookie对象中
+				cookie[keyValue[0].trim()]=keyValue[1];
+			};
+
+			return cookie[key];
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

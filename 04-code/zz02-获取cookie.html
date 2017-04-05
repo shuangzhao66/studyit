@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getCookie(key){
+        var cookieArr = document.cookie.split(";");
+        var arr = [];
+        for (var i = 0; i < cookieArr.length; i++) {
+            var obj = cookieArr[i];
+            var keyvalue = obj.split("=");
+            arr[keyvalue[0].trim()] = keyvalue[1];
+        }
+        return arr[key];
+
+    }
+</script>
+</body>
+</html>
